@@ -1,0 +1,5 @@
+datasource=ds/VYPV_SIR
+spname=VYPV_SIR.SP_ConsultaMorosidad
+codigoContrato=BCRM-00080
+tiposIdPrefijo=JGP
+tiposIdGuion=

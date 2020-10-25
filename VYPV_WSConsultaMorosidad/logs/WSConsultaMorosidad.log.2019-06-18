@@ -1,0 +1,486 @@
+[2019jun18 14:23:20,111][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: VYPV_WSConsultaMorosidad - VERSION: 0.1]
+[2019jun18 14:23:20,133][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Web Service de Morosidad - Consulta MorosidadFunciona en Web Logic 8.1 dentro del .ear]
+[2019jun18 14:23:20,163][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 14:23:20,183][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 14:23:20,201][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 14:23:20,220][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 14:23:20,238][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 14:23:20,257][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:J12342859]
+[2019jun18 14:23:20,275][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 14:23:20,293][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 14:23:20,312][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 14:23:20,340][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 14:23:21,004][ERROR][][consultarMorosidad ConsultaMorosidad.java:158][Error ejecutando consulta a SIR]
+java.sql.SQLException: ORA-06550: line 1, column 7:
+PLS-00201: identifier 'SP_CONSULTAMOROSIDAD' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:305)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:272)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:626)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:181)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at digitel.SPConsultarMorosidad.invocar(SPConsultarMorosidad.java:76)
+	at digitel.ConsultaMorosidad.consultarMorosidad(ConsultaMorosidad.java:155)
+	at digitel.bindings.WSConsultaMorosidadImpl.consultarMorosidad(WSConsultaMorosidadImpl.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.webservice.component.javaclass.JavaClassInvocationHandler.invoke(JavaClassInvocationHandler.java:133)
+	at weblogic.webservice.core.handler.InvokeHandler.handleRequest(InvokeHandler.java:104)
+	at weblogic.webservice.core.HandlerChainImpl.handleRequest(HandlerChainImpl.java:143)
+	at weblogic.webservice.core.DefaultOperation.process(DefaultOperation.java:549)
+	at weblogic.webservice.server.Dispatcher.process(Dispatcher.java:204)
+	at weblogic.webservice.server.Dispatcher.doDispatch(Dispatcher.java:176)
+	at weblogic.webservice.server.Dispatcher.dispatch(Dispatcher.java:96)
+	at weblogic.webservice.server.WebServiceManager.dispatch(WebServiceManager.java:100)
+	at weblogic.webservice.server.servlet.WebServiceServlet.serverSideInvoke(WebServiceServlet.java:297)
+	at weblogic.webservice.server.servlet.ServletBase.doPost(ServletBase.java:485)
+	at weblogic.webservice.server.servlet.WebServiceServlet.doPost(WebServiceServlet.java:267)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2019jun18 14:23:21,045][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en887milisegundos]
+[2019jun18 14:30:25,004][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 14:30:25,024][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 14:30:25,042][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 14:30:25,060][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 14:30:25,078][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 14:30:25,095][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:J12342859]
+[2019jun18 14:30:25,113][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 14:30:25,131][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 14:30:25,149][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 14:30:25,169][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 14:30:25,196][ERROR][][consultarMorosidad ConsultaMorosidad.java:158][Error ejecutando consulta a SIR]
+java.sql.SQLException: ORA-06550: line 1, column 7:
+PLS-00201: identifier 'SP_CONSULTAMOROSIDAD' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:305)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:272)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:626)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:181)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at digitel.SPConsultarMorosidad.invocar(SPConsultarMorosidad.java:76)
+	at digitel.ConsultaMorosidad.consultarMorosidad(ConsultaMorosidad.java:155)
+	at digitel.bindings.WSConsultaMorosidadImpl.consultarMorosidad(WSConsultaMorosidadImpl.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.webservice.component.javaclass.JavaClassInvocationHandler.invoke(JavaClassInvocationHandler.java:133)
+	at weblogic.webservice.core.handler.InvokeHandler.handleRequest(InvokeHandler.java:104)
+	at weblogic.webservice.core.HandlerChainImpl.handleRequest(HandlerChainImpl.java:143)
+	at weblogic.webservice.core.DefaultOperation.process(DefaultOperation.java:549)
+	at weblogic.webservice.server.Dispatcher.process(Dispatcher.java:204)
+	at weblogic.webservice.server.Dispatcher.doDispatch(Dispatcher.java:176)
+	at weblogic.webservice.server.Dispatcher.dispatch(Dispatcher.java:96)
+	at weblogic.webservice.server.WebServiceManager.dispatch(WebServiceManager.java:100)
+	at weblogic.webservice.server.servlet.WebServiceServlet.serverSideInvoke(WebServiceServlet.java:297)
+	at weblogic.webservice.server.servlet.ServletBase.doPost(ServletBase.java:485)
+	at weblogic.webservice.server.servlet.WebServiceServlet.doPost(WebServiceServlet.java:267)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2019jun18 14:30:25,231][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en227milisegundos]
+[2019jun18 14:58:13,065][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 14:58:13,086][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 14:58:13,103][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 14:58:13,121][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 14:58:13,138][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 14:58:13,156][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:J12342859]
+[2019jun18 14:58:13,173][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 14:58:13,191][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 14:58:13,209][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 14:58:13,230][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 14:58:13,254][ERROR][][consultarMorosidad ConsultaMorosidad.java:158][Error ejecutando consulta a SIR]
+java.sql.SQLException: ORA-06550: line 1, column 7:
+PLS-00201: identifier 'SP_CONSULTAMOROSIDAD' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:305)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:272)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:626)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:181)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at digitel.SPConsultarMorosidad.invocar(SPConsultarMorosidad.java:76)
+	at digitel.ConsultaMorosidad.consultarMorosidad(ConsultaMorosidad.java:155)
+	at digitel.bindings.WSConsultaMorosidadImpl.consultarMorosidad(WSConsultaMorosidadImpl.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.webservice.component.javaclass.JavaClassInvocationHandler.invoke(JavaClassInvocationHandler.java:133)
+	at weblogic.webservice.core.handler.InvokeHandler.handleRequest(InvokeHandler.java:104)
+	at weblogic.webservice.core.HandlerChainImpl.handleRequest(HandlerChainImpl.java:143)
+	at weblogic.webservice.core.DefaultOperation.process(DefaultOperation.java:549)
+	at weblogic.webservice.server.Dispatcher.process(Dispatcher.java:204)
+	at weblogic.webservice.server.Dispatcher.doDispatch(Dispatcher.java:176)
+	at weblogic.webservice.server.Dispatcher.dispatch(Dispatcher.java:96)
+	at weblogic.webservice.server.WebServiceManager.dispatch(WebServiceManager.java:100)
+	at weblogic.webservice.server.servlet.WebServiceServlet.serverSideInvoke(WebServiceServlet.java:297)
+	at weblogic.webservice.server.servlet.ServletBase.doPost(ServletBase.java:485)
+	at weblogic.webservice.server.servlet.WebServiceServlet.doPost(WebServiceServlet.java:267)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2019jun18 14:58:13,289][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en224milisegundos]
+[2019jun18 15:02:39,826][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:02:39,846][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:02:39,864][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:02:39,882][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:02:39,900][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:02:39,917][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:J12342859]
+[2019jun18 15:02:39,935][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:02:39,952][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:02:39,970][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:02:39,992][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:02:40,018][ERROR][][consultarMorosidad ConsultaMorosidad.java:158][Error ejecutando consulta a SIR]
+java.sql.SQLException: ORA-06550: line 1, column 7:
+PLS-00201: identifier 'SP_CONSULTAMOROSIDAD' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:305)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:272)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:626)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:181)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at digitel.SPConsultarMorosidad.invocar(SPConsultarMorosidad.java:76)
+	at digitel.ConsultaMorosidad.consultarMorosidad(ConsultaMorosidad.java:155)
+	at digitel.bindings.WSConsultaMorosidadImpl.consultarMorosidad(WSConsultaMorosidadImpl.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.webservice.component.javaclass.JavaClassInvocationHandler.invoke(JavaClassInvocationHandler.java:133)
+	at weblogic.webservice.core.handler.InvokeHandler.handleRequest(InvokeHandler.java:104)
+	at weblogic.webservice.core.HandlerChainImpl.handleRequest(HandlerChainImpl.java:143)
+	at weblogic.webservice.core.DefaultOperation.process(DefaultOperation.java:549)
+	at weblogic.webservice.server.Dispatcher.process(Dispatcher.java:204)
+	at weblogic.webservice.server.Dispatcher.doDispatch(Dispatcher.java:176)
+	at weblogic.webservice.server.Dispatcher.dispatch(Dispatcher.java:96)
+	at weblogic.webservice.server.WebServiceManager.dispatch(WebServiceManager.java:100)
+	at weblogic.webservice.server.servlet.WebServiceServlet.serverSideInvoke(WebServiceServlet.java:297)
+	at weblogic.webservice.server.servlet.ServletBase.doPost(ServletBase.java:485)
+	at weblogic.webservice.server.servlet.WebServiceServlet.doPost(WebServiceServlet.java:267)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2019jun18 15:02:40,053][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en227milisegundos]
+[2019jun18 15:02:49,978][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:02:49,998][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:02:50,016][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:02:50,034][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:02:50,052][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:02:50,070][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:J12342859]
+[2019jun18 15:02:50,088][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:02:50,106][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:02:50,123][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:02:50,143][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:02:50,168][ERROR][][consultarMorosidad ConsultaMorosidad.java:158][Error ejecutando consulta a SIR]
+java.sql.SQLException: ORA-06550: line 1, column 7:
+PLS-00201: identifier 'SP_CONSULTAMOROSIDAD' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:305)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:272)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:626)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:181)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at digitel.SPConsultarMorosidad.invocar(SPConsultarMorosidad.java:76)
+	at digitel.ConsultaMorosidad.consultarMorosidad(ConsultaMorosidad.java:155)
+	at digitel.bindings.WSConsultaMorosidadImpl.consultarMorosidad(WSConsultaMorosidadImpl.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.webservice.component.javaclass.JavaClassInvocationHandler.invoke(JavaClassInvocationHandler.java:133)
+	at weblogic.webservice.core.handler.InvokeHandler.handleRequest(InvokeHandler.java:104)
+	at weblogic.webservice.core.HandlerChainImpl.handleRequest(HandlerChainImpl.java:143)
+	at weblogic.webservice.core.DefaultOperation.process(DefaultOperation.java:549)
+	at weblogic.webservice.server.Dispatcher.process(Dispatcher.java:204)
+	at weblogic.webservice.server.Dispatcher.doDispatch(Dispatcher.java:176)
+	at weblogic.webservice.server.Dispatcher.dispatch(Dispatcher.java:96)
+	at weblogic.webservice.server.WebServiceManager.dispatch(WebServiceManager.java:100)
+	at weblogic.webservice.server.servlet.WebServiceServlet.serverSideInvoke(WebServiceServlet.java:297)
+	at weblogic.webservice.server.servlet.ServletBase.doPost(ServletBase.java:485)
+	at weblogic.webservice.server.servlet.WebServiceServlet.doPost(WebServiceServlet.java:267)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2019jun18 15:02:50,204][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en226milisegundos]
+[2019jun18 15:04:07,609][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: VYPV_WSConsultaMorosidad - VERSION: 0.1]
+[2019jun18 15:04:07,629][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Web Service de Morosidad - Consulta MorosidadFunciona en Web Logic 8.1 dentro del .ear]
+[2019jun18 15:04:07,657][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:04:07,676][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:04:07,694][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:04:07,712][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:04:07,730][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:04:07,748][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:J12342859]
+[2019jun18 15:04:07,768][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:04:07,786][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:04:07,804][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:04:07,829][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:04:07,861][ERROR][][consultarMorosidad ConsultaMorosidad.java:158][Error ejecutando consulta a SIR]
+java.sql.SQLException: ORA-06550: line 1, column 7:
+PLS-00201: identifier 'SP_CONSULTAMOROSIDAD' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:305)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:272)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:626)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:181)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at digitel.SPConsultarMorosidad.invocar(SPConsultarMorosidad.java:76)
+	at digitel.ConsultaMorosidad.consultarMorosidad(ConsultaMorosidad.java:155)
+	at digitel.bindings.WSConsultaMorosidadImpl.consultarMorosidad(WSConsultaMorosidadImpl.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.webservice.component.javaclass.JavaClassInvocationHandler.invoke(JavaClassInvocationHandler.java:133)
+	at weblogic.webservice.core.handler.InvokeHandler.handleRequest(InvokeHandler.java:104)
+	at weblogic.webservice.core.HandlerChainImpl.handleRequest(HandlerChainImpl.java:143)
+	at weblogic.webservice.core.DefaultOperation.process(DefaultOperation.java:549)
+	at weblogic.webservice.server.Dispatcher.process(Dispatcher.java:204)
+	at weblogic.webservice.server.Dispatcher.doDispatch(Dispatcher.java:176)
+	at weblogic.webservice.server.Dispatcher.dispatch(Dispatcher.java:96)
+	at weblogic.webservice.server.WebServiceManager.dispatch(WebServiceManager.java:100)
+	at weblogic.webservice.server.servlet.WebServiceServlet.serverSideInvoke(WebServiceServlet.java:297)
+	at weblogic.webservice.server.servlet.ServletBase.doPost(ServletBase.java:485)
+	at weblogic.webservice.server.servlet.WebServiceServlet.doPost(WebServiceServlet.java:267)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2019jun18 15:04:07,897][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en244milisegundos]
+[2019jun18 15:05:25,401][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: VYPV_WSConsultaMorosidad - VERSION: 0.1]
+[2019jun18 15:05:25,421][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Web Service de Morosidad - Consulta MorosidadFunciona en Web Logic 8.1 dentro del .ear]
+[2019jun18 15:05:25,449][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:05:25,469][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:05:25,487][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:05:25,505][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:05:25,524][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:05:25,544][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:J12342859]
+[2019jun18 15:05:25,563][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:05:25,583][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:05:25,603][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:05:25,629][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:05:30,678][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:1]
+[2019jun18 15:05:30,699][INFO ][][consultarMorosidad ConsultaMorosidad.java:174][no se encontro cliente en SIR con el numero de documento de identificacion suministrado]
+[2019jun18 15:05:30,717][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en5271milisegundos]
+[2019jun18 15:06:01,226][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:06:01,246][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:06:01,264][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:06:01,282][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:06:01,300][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:06:01,318][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:14046213]
+[2019jun18 15:06:01,335][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:06:01,353][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:06:01,370][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:06:01,391][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:06:06,038][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:0]
+[2019jun18 15:06:06,058][DEBUG][][consultarMorosidad ConsultaMorosidad.java:186][Construyendo respuesta]
+[2019jun18 15:06:06,077][INFO ][][consultarMorosidad ConsultaMorosidad.java:190][Estatus cobranza:R]
+[2019jun18 15:06:06,095][INFO ][][consultarMorosidad ConsultaMorosidad.java:197][Ejecutivo de cobranzas:]
+[2019jun18 15:06:06,114][INFO ][][consultarMorosidad ConsultaMorosidad.java:201][Proceso de cobranzas:null]
+[2019jun18 15:06:06,133][DEBUG][][consultarMorosidad ConsultaMorosidad.java:204][Consulta realizada exitosamente]
+[2019jun18 15:06:06,153][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en4927milisegundos]
+[2019jun18 15:06:16,129][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:06:16,149][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:06:16,167][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:06:16,185][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:06:16,203][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:06:16,221][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:16590882]
+[2019jun18 15:06:16,238][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:06:16,256][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:06:16,274][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:06:16,294][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:06:20,635][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:0]
+[2019jun18 15:06:20,655][DEBUG][][consultarMorosidad ConsultaMorosidad.java:186][Construyendo respuesta]
+[2019jun18 15:06:20,673][INFO ][][consultarMorosidad ConsultaMorosidad.java:190][Estatus cobranza:M]
+[2019jun18 15:06:20,690][INFO ][][consultarMorosidad ConsultaMorosidad.java:197][Ejecutivo de cobranzas:]
+[2019jun18 15:06:20,708][INFO ][][consultarMorosidad ConsultaMorosidad.java:201][Proceso de cobranzas:null]
+[2019jun18 15:06:20,726][DEBUG][][consultarMorosidad ConsultaMorosidad.java:204][Consulta realizada exitosamente]
+[2019jun18 15:06:20,747][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en4618milisegundos]
+[2019jun18 15:23:34,942][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:23:34,962][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:23:34,980][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:23:34,997][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:23:35,015][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:23:35,033][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:13392269]
+[2019jun18 15:23:35,051][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:23:35,071][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:23:35,090][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:23:35,112][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:23:40,233][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:0]
+[2019jun18 15:23:40,253][DEBUG][][consultarMorosidad ConsultaMorosidad.java:186][Construyendo respuesta]
+[2019jun18 15:23:40,271][INFO ][][consultarMorosidad ConsultaMorosidad.java:190][Estatus cobranza:O]
+[2019jun18 15:23:40,289][INFO ][][consultarMorosidad ConsultaMorosidad.java:197][Ejecutivo de cobranzas:]
+[2019jun18 15:23:40,306][INFO ][][consultarMorosidad ConsultaMorosidad.java:201][Proceso de cobranzas:null]
+[2019jun18 15:23:40,324][DEBUG][][consultarMorosidad ConsultaMorosidad.java:204][Consulta realizada exitosamente]
+[2019jun18 15:23:40,341][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en5399milisegundos]
+[2019jun18 15:24:25,279][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:24:25,299][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:24:25,317][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:24:25,335][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:24:25,353][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:24:25,370][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:10832134]
+[2019jun18 15:24:25,388][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:24:25,406][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:24:25,423][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:24:25,444][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:24:29,931][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:0]
+[2019jun18 15:24:29,952][DEBUG][][consultarMorosidad ConsultaMorosidad.java:186][Construyendo respuesta]
+[2019jun18 15:24:29,969][INFO ][][consultarMorosidad ConsultaMorosidad.java:190][Estatus cobranza:R]
+[2019jun18 15:24:29,987][INFO ][][consultarMorosidad ConsultaMorosidad.java:197][Ejecutivo de cobranzas:]
+[2019jun18 15:24:30,004][INFO ][][consultarMorosidad ConsultaMorosidad.java:201][Proceso de cobranzas:null]
+[2019jun18 15:24:30,022][DEBUG][][consultarMorosidad ConsultaMorosidad.java:204][Consulta realizada exitosamente]
+[2019jun18 15:24:30,040][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en4761milisegundos]
+[2019jun18 15:42:13,208][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:42:13,228][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:42:13,247][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:42:13,268][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:42:13,289][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:42:13,307][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:16590882]
+[2019jun18 15:42:13,325][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:42:13,342][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:42:13,360][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:42:13,381][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:42:18,183][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:0]
+[2019jun18 15:42:18,204][DEBUG][][consultarMorosidad ConsultaMorosidad.java:186][Construyendo respuesta]
+[2019jun18 15:42:18,222][INFO ][][consultarMorosidad ConsultaMorosidad.java:190][Estatus cobranza:M]
+[2019jun18 15:42:18,239][INFO ][][consultarMorosidad ConsultaMorosidad.java:197][Ejecutivo de cobranzas:]
+[2019jun18 15:42:18,257][INFO ][][consultarMorosidad ConsultaMorosidad.java:201][Proceso de cobranzas:null]
+[2019jun18 15:42:18,275][DEBUG][][consultarMorosidad ConsultaMorosidad.java:204][Consulta realizada exitosamente]
+[2019jun18 15:42:18,292][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en5084milisegundos]
+[2019jun18 15:42:57,761][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:42:57,781][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:42:57,802][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:42:57,822][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:42:57,842][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:42:57,862][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:10071022]
+[2019jun18 15:42:57,883][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:42:57,903][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:42:57,923][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:42:57,945][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:43:02,447][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:0]
+[2019jun18 15:43:02,467][DEBUG][][consultarMorosidad ConsultaMorosidad.java:186][Construyendo respuesta]
+[2019jun18 15:43:02,485][INFO ][][consultarMorosidad ConsultaMorosidad.java:190][Estatus cobranza:O]
+[2019jun18 15:43:02,503][INFO ][][consultarMorosidad ConsultaMorosidad.java:197][Ejecutivo de cobranzas:]
+[2019jun18 15:43:02,521][INFO ][][consultarMorosidad ConsultaMorosidad.java:201][Proceso de cobranzas:null]
+[2019jun18 15:43:02,539][DEBUG][][consultarMorosidad ConsultaMorosidad.java:204][Consulta realizada exitosamente]
+[2019jun18 15:43:02,557][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en4796milisegundos]
+[2019jun18 15:46:01,990][INFO ][][consultarMorosidad ConsultaMorosidad.java:105][Iniciando WSConsultaMorosidad]
+[2019jun18 15:46:02,010][INFO ][][consultarMorosidad ConsultaMorosidad.java:106][Channel:EJEACT1]
+[2019jun18 15:46:02,028][INFO ][][consultarMorosidad ConsultaMorosidad.java:107][User:123456]
+[2019jun18 15:46:02,045][DEBUG][][consultarMorosidad ConsultaMorosidad.java:120][tiposIdPrefijo:JGP]
+[2019jun18 15:46:02,063][DEBUG][][consultarMorosidad ConsultaMorosidad.java:121][tiposIdGuion:]
+[2019jun18 15:46:02,081][INFO ][][consultarMorosidad ConsultaMorosidad.java:130][Numero de identificacion de cliente:16590882]
+[2019jun18 15:46:02,099][INFO ][][consultarMorosidad ConsultaMorosidad.java:131][Numero de cuenta:-1]
+[2019jun18 15:46:02,118][DEBUG][][consultarMorosidad ConsultaMorosidad.java:139][Realizando conexion a base de datos]
+[2019jun18 15:46:02,137][DEBUG][][getConnection ConsultaMorosidad.java:47][nombre de datasource:ds/VYPV_SIR]
+[2019jun18 15:46:02,160][DEBUG][][consultarMorosidad ConsultaMorosidad.java:150][Conexion a base de datos exitosa]
+[2019jun18 15:46:06,649][DEBUG][][consultarMorosidad ConsultaMorosidad.java:166][Codigo de retorno de SPConsultaMorosidad:0]
+[2019jun18 15:46:06,669][DEBUG][][consultarMorosidad ConsultaMorosidad.java:186][Construyendo respuesta]
+[2019jun18 15:46:06,687][INFO ][][consultarMorosidad ConsultaMorosidad.java:190][Estatus cobranza:M]
+[2019jun18 15:46:06,705][INFO ][][consultarMorosidad ConsultaMorosidad.java:197][Ejecutivo de cobranzas:]
+[2019jun18 15:46:06,723][INFO ][][consultarMorosidad ConsultaMorosidad.java:201][Proceso de cobranzas:null]
+[2019jun18 15:46:06,740][DEBUG][][consultarMorosidad ConsultaMorosidad.java:204][Consulta realizada exitosamente]
+[2019jun18 15:46:06,758][DEBUG][][consultarMorosidad ConsultaMorosidad.java:213][peticion finalizada en4768milisegundos]
